@@ -1,0 +1,25 @@
+a{
+text-decoration:none;
+padding:10px;
+margin:5px;
+ background-color:#3CB371;
+ font-size:30px;
+}
+div{
+display:flex;
+left:20px;
+}
+header{
+display:flex;
+justify-content: space-between;
+
+align-items:center;
+ background-color: #F0F8FF
+}
+p{
+font-size:70px;
+}
+section{
+display:flex;
+justify-content: center;
+}

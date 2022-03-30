@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"th:href="@{css/index.css}" >
+</head>
+<body>
+<header>
+
+<h1 th:text="'username : ' + ${username} "></h1>
+    <div id="login">
+    <a href="/perform_logout">logout</a>
+    </div>
+</header>
+<section>
+<p th:text="'full name :' + ${firstName} + ' '+ ${lastName} "></p>
+
+</section>
+<section>
+    <p th:text="'bio :' + ${bio}  "></p>
+</section>
+
+
+</body>
+</html>
