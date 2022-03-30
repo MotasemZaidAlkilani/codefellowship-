@@ -1,0 +1,16 @@
+body{
+background-color: #F0F8FF;
+height:100%;
+width:100%;
+}
+a{
+text-decoration:none;
+padding:1px;
+margin:10px;
+ background-color:#3CB371;
+ font-size:30px;
+}
+input{
+padding:10px;
+}
+
