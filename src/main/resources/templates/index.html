@@ -9,19 +9,37 @@
 <body>
 <header>
 
-<h1 th:text="'username : ' + ${username} "></h1>
+    <h1 th:text="'username : ' + ${username} "></h1>
     <div id="login">
-    <a href="/perform_logout">logout</a>
+        <a href="/perform_logout">logout</a>
     </div>
 </header>
+<a href="/myprofile">my profile</a>
+<a href="/users">users</a>
 <section>
-<p th:text="'full name :' + ${firstName} + ' '+ ${lastName} "></p>
+    <form action="newpost" method="POST">
+        <h2>enter your post</h2>
+        <input type="text" name="body">
+        <input type="hidden" name="createdAt" id="createdAt">
+        <input type="submit" value="post">
+
+    </form>
 
 </section>
 <section>
-    <p th:text="'bio :' + ${bio}  "></p>
+    <p class="message"th:text="${message}"></p>
 </section>
 
 
+
+
+
+
+<script>
+var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  document.getElementById("createdAt").value = time;
+</script>
 </body>
+
 </html>

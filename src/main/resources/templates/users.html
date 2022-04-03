@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>users</title>
+    <link rel="stylesheet" th:href="@{css/users.css}" >
+</head>
+<body>
+<header>
+
+    <h1 th:text="'username : ' + ${username} "></h1>
+    <div id="login">
+        <a href="/perform_logout">logout</a>
+    </div>
+</header>
+
+<a href="/">back</a>
+<section><h1>if there is no data , please try exists id</h1></section>
+<p id="error-message"  th:text="${errorMessage}"></p>
+<section><img width="70px" height="70px"th:src="@{https://www.pinclipart.com/picdir/middle/200-2008697_account-customer-login-man-user-icon-login-icon.png}"/></section>
+
+<section>
+    <p th:text="'full name :' + ${firstName} + ' '+ ${lastName} "></p>
+</section>
+<section>
+    <p th:text="'date of birth :' + ${dateOfBirth}  "></p>
+</section>
+<section>
+    <p th:text="'bio :' + ${bio}  "></p>
+</section>
+
+<section>
+    <div>
+        <ul th:each="post : ${postsList}">
+            <div>
+                <p><strong>post  :</strong><span th:text="${post.body}+'  '"></span></p>
+            </div>
+            <div>
+                <p><strong>time :</strong><span th:text="${post.createdAt}"></spanth:text> </span></p>
+            </div>
+            <p>****************************</p>
+        </ul>
+    </div>
+</section>
+</body>
+</html>
